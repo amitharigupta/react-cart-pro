@@ -5,7 +5,7 @@ import Image2 from "../assets/Image1.png";
 import Image3 from "../assets/Image1.png";
 import Image4 from "../assets/Image1.png";
 import Image5 from "../assets/Image1.png";
-
+import toast from "react-hot-toast";
 
 const Home = () => {
 
@@ -44,6 +44,7 @@ const Home = () => {
 
 const addToCartHandler = (options) => {
   console.log(options);
+  return toast.success('Added To Cart');
 }
   return (
     <div className="home">
