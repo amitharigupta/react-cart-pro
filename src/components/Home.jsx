@@ -6,6 +6,7 @@ import Image3 from "../assets/Image1.png";
 import Image4 from "../assets/Image1.png";
 import Image5 from "../assets/Image1.png";
 import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
 
 const Home = () => {
 
@@ -42,9 +43,12 @@ const Home = () => {
     },
   ]
 
+  const dispatch = useDispatch();
+
 const addToCartHandler = (options) => {
   console.log(options);
-  return toast.success('Added To Cart');
+  toast.success('Added To Cart');
+  dispatch({ type: "addToCart" , payload: options });
 }
   return (
     <div className="home">
